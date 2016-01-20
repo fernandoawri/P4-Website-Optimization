@@ -2,9 +2,18 @@
 
 In this Repository you will find an optimized website. I made the optimization for website provided by Udacity (You can find the original repository [here](https://github.com/udacity/frontend-nanodegree-mobile-portfolio)) All criteria must "meet specifications" in order to pass.
 
-![alt tag](P4-Website-Optimization/src/img/criteria.JPG)
+![criteria](https://github.com/fernandoawri/P4-Website-Optimization/blob/master/src/img/criteria.JPG)
 
-To get started, check out the repository, inspect the code,
+I updated the html files from the repository to Meet specifications, I moved the scripts till the button of the file  and also I added async to the js files to eliminate render-blocking JavaScript and CSS in above-the-fold content. I also included the import for the google fonts to the perfmatters.js file.
+
+I compressed and minified all the files to reduce the size of request submitted to the server. I compressed all images and created and resized some of them a make a better rendering.
+
+
+
+
+
+
+To get started, check out the repository, inspect the code.
 
 ### Getting started
 
