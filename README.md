@@ -2,7 +2,7 @@
 
 In this Repository you will find an optimized website. I made the optimization for website provided by Udacity (You can find the original repository [here](https://github.com/udacity/frontend-nanodegree-mobile-portfolio)) All criteria must "meet specifications" in order to pass.
 
-![alt tag](P4-Website-Optimization/src/img/criteria.JPG)
+![alt tag](https://github.com/fernandoawri/P4-Website-Optimization/blob/master/src/img/criteria.JPG)
 
 To get started, check out the repository, inspect the code,
 
