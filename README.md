@@ -4,22 +4,17 @@ In this Repository you will find an optimized website. I made the optimization f
 
 ![criteria](https://github.com/fernandoawri/P4-Website-Optimization/blob/master/src/img/criteria.JPG)
 
+### Getting started
+
+#### Part 1: Check Optimize PageSpeed Insights score for index.html
+
 I updated the html files from the repository to Meet specifications, I moved the scripts till the button of the file  and also I added async to the js files to eliminate render-blocking JavaScript and CSS in above-the-fold content. I also included the import for the google fonts to the perfmatters.js file.
 
 I compressed and minified all the files to reduce the size of request submitted to the server. I compressed all images and created and resized some of them a make a better rendering.
 
-
-
-
-
-
 To get started, check out the repository, inspect the code.
 
-### Getting started
-
-####Part 1: Optimize PageSpeed Insights score for index.html
-
-Some useful tips to help you get started:
+#### Some useful tips to help you get started:
 
 1. Check out the repository
 1. To inspect the site on your phone, you can run a local server
@@ -39,11 +34,17 @@ Some useful tips to help you get started:
 
 1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+### Part 2: Optimize Frames per Second in pizza.html
 
-####Part 2: Optimize Frames per Second in pizza.html
+To optimize views/pizza.html, I modified views/js/main.js to make the frames per second rate is 60 fps or higher.
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
+To meet this specification I changed some method to get the elements in the javascript code. e.g. The document.getElementsByClassName() and document.getElementById() Web API call are faster than document.querySelectorAll() & document.querySelector() methods.
+
+I updated some for loops saving the array length which is part of the condition statement, in a local variable, so the array's length property is not accessed to check its value at each iteration. (i.e. more efficiency)
+
+I modified the changePizzaSizes() to avoid the multiple calls toa method, I changed the approach calling "var randomPizzas = document.getElementsByClassName("randomPizzaContainer");" outside of the for loop to make only one call to the DOM, and instead of call the method determineDx() multiple times, I create a switch that gives you the size in % to set the new size.
+
+Also I replaced the "window.addEventListener('scroll', updatePositions);" for "window.addEventListener('scroll', animationCheck);" that way I call "window.requestAnimationFrame(updatePositions);", Also I added "backface-visibility: hidden;" to the center class in the CSS section and I'm using "translate3d" instead of "items[i].basicLeft + 100 * phase + 'px';" 
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
@@ -58,27 +59,3 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
-
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
-
-### Sample Portfolios
-
-Feeling uninspired by the portfolio? Here's a list of cool portfolios I found after a few minutes of Googling.
-
-* <a href="http://www.reddit.com/r/webdev/comments/280qkr/would_anybody_like_to_post_their_portfolio_site/">A great discussion about portfolios on reddit</a>
-* <a href="http://ianlunn.co.uk/">http://ianlunn.co.uk/</a>
-* <a href="http://www.adhamdannaway.com/portfolio">http://www.adhamdannaway.com/portfolio</a>
-* <a href="http://www.timboelaars.nl/">http://www.timboelaars.nl/</a>
-* <a href="http://futoryan.prosite.com/">http://futoryan.prosite.com/</a>
-* <a href="http://playonpixels.prosite.com/21591/projects">http://playonpixels.prosite.com/21591/projects</a>
-* <a href="http://colintrenter.prosite.com/">http://colintrenter.prosite.com/</a>
-* <a href="http://calebmorris.prosite.com/">http://calebmorris.prosite.com/</a>
-* <a href="http://www.cullywright.com/">http://www.cullywright.com/</a>
-* <a href="http://yourjustlucky.com/">http://yourjustlucky.com/</a>
-* <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
-* <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
-* <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
